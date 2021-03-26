@@ -14,7 +14,7 @@ const PollList = (props) => {
           style={{ cursor: "pointer" }}
         >
           {poll.title.length > 30
-            ? poll.title.substr(0, 30) + "..."
+            ? poll.title.substr(0, 20) + "..."
             : poll.title}
         </ListGroupItem>
       ))}

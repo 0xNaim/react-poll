@@ -80,7 +80,11 @@ class PollForm extends React.Component {
         alert("Updated Successfully");
         this.props.toggleModal();
       } else {
-        this.props.submit();
+        this.props.submit({
+          title,
+          description,
+          options,
+        });
         event.target.reset();
         this.setState({
           title: "",
