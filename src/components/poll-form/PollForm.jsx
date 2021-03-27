@@ -119,10 +119,12 @@ class PollForm extends React.Component {
     options.forEach((opt, index) => {
       if (!opt.value) {
         optionsErrors[index] = "Options text empty.";
+        alert("Please provide a option name.");
         // optionsErrors.push("Options text empty.");
       } else if (opt.value.length > 100) {
         optionsErrors[index] = "Options text too long.";
-        // optionsErrors.push("Options text too long.");
+        alert("Options text is too long.");
+        // optionsErrors.push("Options text is too long.");
       }
     });
 

@@ -50,13 +50,11 @@ class App extends React.Component {
     const { polls } = this.state;
     const poll = polls.find((p) => p.id === response.pollId);
     const option = poll.options.find(
-      (opt) => opt.id === response.selectedOption
+      (option) => option.id === response.selectedOption
     );
 
-    console.log(poll);
     poll.totalVote++;
     option.vote++;
-
     const opinion = {
       id: shortid.generate(),
       name: response.name,

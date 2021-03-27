@@ -18,6 +18,7 @@ const MyForm = ({
   createOptions,
   deleteOptions,
   handleSubmit,
+  toggleModal,
 }) => (
   <Form onSubmit={handleSubmit}>
     <FormGroup>
