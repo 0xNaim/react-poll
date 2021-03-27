@@ -47,7 +47,7 @@ const MyForm = ({
     <FormGroup>
       <Label>
         Enter Options
-        <span
+        <Button
           style={{
             marginLeft: "30px",
             background: "green",
@@ -56,10 +56,11 @@ const MyForm = ({
             borderRadius: "5px",
             cursor: "pointer",
           }}
+          type="button"
           onClick={createOptions}
         >
           Add Options
-        </span>
+        </Button>
       </Label>
       {options.map((opt, index) => (
         <div className="d-flex my-2">
@@ -69,6 +70,7 @@ const MyForm = ({
             invalid={errors.options && errors.options[index] ? true : false}
           />
           <Button
+            type="button"
             color="danger"
             disabled={options.length <= 2}
             className="ml-2"

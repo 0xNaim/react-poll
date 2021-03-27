@@ -54,7 +54,7 @@ class App extends React.Component {
     );
 
     poll.totalVote++;
-    // option.vote++;
+    option.vote++;
     const opinion = {
       id: shortid.generate(),
       name: response.name,
